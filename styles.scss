@@ -1,0 +1,169 @@
+.wrapper {
+    margin: 50px;
+}
+
+h1 {
+    color: lightgray;
+    font-family: lato;
+    font-size: 20px;
+    font-weight: 200;
+    padding: 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+/* CSS transitions: an introduction */
+
+.container {
+    display: inline-block;
+    width: 300px;
+}
+
+.box {
+    border-radius: 5px;
+    height: 40px;
+    margin: 50px auto;
+    width: 80px;
+    .wrapper:hover & {
+        transform: scale(2);
+    }
+}
+
+.box1 {
+    background: mediumturquoise;
+}
+
+.box2 {
+    background: #2b3f53;
+    transition: all 1s;
+}
+
+
+/* this box transforms to be double it's original size but it does so smoothly and gradually */
+
+
+/* transition-duration (required) */
+
+.container2 {
+    display: inline-block;
+    width: 150px;
+}
+
+h1 {
+    color: lightgray;
+    font-family: lato;
+    font-size: 20px;
+    font-weight: 200;
+    padding: 20px;
+    text-align: center;
+}
+
+.circ {
+    border-radius: 50%;
+    height: 40px;
+    margin: 50px auto;
+    width: 40px;
+    .wrapper:hover & {
+        transform: scale(2);
+    }
+}
+
+.circ1 {
+    background: #60D4C8;
+    transition: all 300ms;
+}
+
+.circ2 {
+    background: #46BAAF;
+    transition: all 1s;
+}
+
+.circ3 {
+    background: #3EA69B;
+    transition: all 3s;
+}
+
+
+/* transition-timing (optional) */
+
+.container3 {
+    margin: 100px;
+}
+
+.circle {
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    margin: 10px;
+    .container3:hover & {
+        transform: translateX(200px);
+    }
+}
+
+.circle0 {
+    @extend .circle;
+    background: PaleTurquoise;
+    transition: all 1.5s linear;
+}
+
+.circle1 {
+    @extend .circle;
+    background: salmon;
+    transition: all 1.5s ease;
+}
+
+.circle2 {
+    @extend .circle;
+    background: lightskyblue;
+    transition: all 1.5s ease-in;
+}
+
+.circle3 {
+    @extend .circle;
+    background: khaki;
+    transition: all 1.5s ease-out;
+}
+
+.circle4 {
+    @extend .circle;
+    background: mediumturquoise;
+    transition: all 1.5s ease-in-out;
+}
+
+.circle5 {
+    @extend .circle;
+    background: thistle;
+    transition: all 1.5s cubic-bezier(0, 1, .98, 0);
+}
+
+
+/* transition-delay (optional) */
+
+.container4 {
+    margin: 100px;
+}
+
+.boxaa {
+    background: steelblue;
+    border-radius: 5px;
+    display: inline-block;
+    height: 80px;
+    margin: 20px;
+    width: 80px;
+    .container4:hover & {
+        transform: scale(1.4);
+    }
+}
+
+.boxa {
+    transition: all 1.3s;
+}
+
+.boxb {
+    transition: all 1.3s 0.5s;
+}
+
+.boxc {
+    transition: all 1.3s 1s;
+}

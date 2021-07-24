@@ -1,0 +1,93 @@
+        /* CSS transforms: an introduction */
+        /* scale */
+        
+        .square {
+            background: darkturquoise;
+            border-radius: 5px;
+            height: 100px;
+            margin: 100px;
+            transition: transform 1s;
+            /* Don’t forget to add a transition! Without applying transition, the element would abruptly change sizes. Add the transition to the parent selector (not the hover selector).  */
+            width: 100px;
+            &:hover {
+                transform: scale(2);
+            }
+        }
+        /* rotate */
+        
+        .droplet {
+            background: mediumaquamarine;
+            border-radius: 2% 50%;
+            height: 100px;
+            margin: 100px;
+            transition: transform 3s;
+            transition-timing-function: ease-in-out;
+            width: 100px;
+            &:hover {
+                transform: rotate(1080deg);
+            }
+        }
+        /* translate */
+        
+        .square2 {
+            background: #00aa9d;
+            border-radius: 3px;
+            height: 150px;
+            margin: 100px;
+            position: absolute;
+            transition: transform 0.8s;
+            width: 150px;
+        }
+        
+        .square3 {
+            background: #2b3f53;
+            border-radius: 3px;
+            height: 150px;
+            margin: 100px;
+            transition: transform 0.8s;
+            position: absolute;
+            width: 150px;
+            &:hover {
+                transform: translate(20px, 20px);
+            }
+        }
+        /* skew */
+        
+        .square4 {
+            background: Khaki;
+            border-radius: 5px;
+            height: 150px;
+            margin: 400px 100px 100px;
+            transition: transform 1s;
+            width: 150px;
+            &:hover {
+                transform: skewX(-20deg);
+            }
+        }
+        /* transform-origin */
+        
+        .droplet2 {
+            background: skyblue;
+            border-radius: 5px 50%;
+            height: 100px;
+            margin: 150px auto;
+            transform-origin: left top;
+            transition: transform 3s;
+            width: 100px;
+            &:hover {
+                transform: rotate(500deg);
+            }
+        }
+        /* Shorthand for transform-origin */
+        
+        .square5 {
+            background: salmon;
+            border-radius: 5px;
+            height: 75px;
+            margin: 100px;
+            transition: transform 1s;
+            width: 75px;
+            &:hover {
+                transform: rotate(90deg) scale(1.75) translateX(50px);
+            }
+        }
